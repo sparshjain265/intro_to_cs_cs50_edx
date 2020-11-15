@@ -1,0 +1,103 @@
+\chapter{Arrays}
+\section{Compiling}
+\subsection{Preprocessing}
+Expansion/Inclusion of header files, macros, etc.
+
+\subsection{Compiling}
+C code $\to$ Assembly code.
+
+\subsection{Assembling}
+Assembly code $\to$ Machine code.
+
+\subsection{Linking}
+Linking all relevent files.
+
+\section{Debugging}
+\begin{itemize}
+    \item Can use \mintinline{bash}{help50} to understand error msgs in this course.
+    \item Can use (poor man's) \mintinline{c}{printf}.
+    \item Can use \mintinline{bash}{debug50} for proper debugging (in this course).
+\end{itemize}
+
+\begin{remark}
+    Use \mintinline{bash}{style50} for styling your code.
+\end{remark}
+
+\section{Casting}
+\begin{listing}[ht!]
+    \inputminted[linenos]{c}{codes/src2/hi.c}
+    \caption{casting}
+\end{listing}
+
+\section{Array}
+Follow through the following examples:
+\begin{listing}[htbp!]
+    \inputminted[linenos]{c}{codes/src2/scores0.c}
+    \caption{scores0.c}
+\end{listing}
+
+\begin{listing}[htbp!]
+    \inputminted[linenos]{c}{codes/src2/scores1.c}
+    \caption{scores1.c}
+\end{listing}
+
+\begin{listing}[htbp!]
+    \inputminted[linenos]{c}{codes/src2/scores2.c}
+    \caption{scores2.c}
+\end{listing}
+
+\begin{listing}[htbp!]
+    \inputminted[linenos]{c}{codes/src2/scores3.c}
+    \caption{scores3.c}
+\end{listing}
+
+% \clearpage
+\section{String}
+\mintinline{c}{string} is just (or a little more) than an array of \mintinline{c}{chars}.
+
+\begin{listing}[!htbp]
+    \inputminted[linenos]{c}{codes/src2/names.c}
+    \caption{names.c}
+\end{listing}
+
+\begin{listing}[!htbp]
+    \inputminted[linenos]{c}{codes/src2/string0.c}
+    \caption{string0.c}
+\end{listing}
+
+\begin{listing}[!htbp]
+    \inputminted[linenos]{c}{codes/src2/string1.c}
+    \caption{string1.c}
+\end{listing}
+
+\begin{listing}[!htbp]
+    \inputminted[linenos]{c}{codes/src2/string2.c}
+    \caption{string2.c}
+\end{listing}
+
+\begin{listing}[!htbp]
+    \inputminted[linenos]{c}{codes/src2/uppercase0.c}
+    \caption{uppercase0.c}
+\end{listing}
+
+\begin{listing}[!htbp]
+    \inputminted[linenos]{c}{codes/src2/uppercase1.c}
+    \caption{uppercase1.c}
+\end{listing}
+
+\clearpage
+\section{Command Line Arguments}
+\begin{listing}[!htbp]
+    \inputminted[linenos]{c}{codes/src2/argv.c}
+    \caption{argv.c}
+\end{listing}
+
+\begin{listing}[!htbp]
+    \inputminted[linenos]{c}{codes/src2/argv2.c}
+    \caption{argv2.c}
+\end{listing}
+
+\begin{listing}[!htbp]
+    \inputminted[linenos]{c}{codes/src2/exit.c}
+    \caption{exit.c}
+\end{listing}
