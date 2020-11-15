@@ -1,0 +1,4 @@
+Get Height
+Repeat until user cooperates
+Iterate till height
+    For each iteration, print appropriate spaces and hashes
