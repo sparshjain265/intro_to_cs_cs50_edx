@@ -10,7 +10,11 @@
 \usepackage[normalem]{ulem}
 \usepackage{pdfpages}
 \usepackage[toc,page]{appendix}
-\usepackage{minted}
+\usepackage{float}
+
+\usepackage[chapter,newfloat]{minted}
+\SetupFloatingEnvironment{listing}{name=Program}
+\SetupFloatingEnvironment{listing}{listname=List of Programs}
 
 %%% blank footnote
 \newcommand\blfootnote[1]{
@@ -34,6 +38,21 @@
 %%% minimize
 \DeclareMathOperator*{\minimize}{minimize}
 %%%
+
+% Theorem environments
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{observation}[theorem]{Observation}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
 
 %%%
 \def\N{\mathbb{N}}
@@ -67,9 +86,11 @@
 \tableofcontents
 % \listoffigures
 % \listoftables
+\listoflistings
 
 % \include{chapters/introduction}
 \include{chapters/scratch}
+\include{chapters/C}
 
 %%% chapter endnote
 % \blfootnote{Check \href{lecture_pdf/Lecture1.pdf}{Lecture1.pdf} for more details.}
