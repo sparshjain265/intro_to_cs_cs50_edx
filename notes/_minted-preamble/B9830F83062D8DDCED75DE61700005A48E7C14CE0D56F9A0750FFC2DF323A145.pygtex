@@ -1,8 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{if} \PYG{n}{only} \PYG{l+m+mi}{1} \PYG{n}{item}
-	\PYG{k}{return}
-\PYG{k}{else}
-	\PYG{n}{sort} \PYG{n}{left} \PYG{n}{half} \PYG{n}{of} \PYG{n}{items}
-	\PYG{n}{sort} \PYG{n}{right} \PYG{n}{half} \PYG{n}{of} \PYG{n}{items}
-	\PYG{n}{merge} \PYG{n}{sorted} \PYG{n}{halves}
-\end{Verbatim}

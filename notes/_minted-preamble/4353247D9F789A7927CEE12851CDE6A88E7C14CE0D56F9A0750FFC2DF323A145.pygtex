@@ -1,6 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-	\PYG{k}{while}\PYG{p}{(}\PYG{n+nb}{true}\PYG{p}{)}
-	\PYG{p}{\PYGZob{}}
-
-	\PYG{p}{\PYGZcb{}}
-\end{Verbatim}
