@@ -11,5 +11,6 @@
 *.lol
 .latexmkrc
 _minted-notes
+_minted-preamble
 *.zip
 
