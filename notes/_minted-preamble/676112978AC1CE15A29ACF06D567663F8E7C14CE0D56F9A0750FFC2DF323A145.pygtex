@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+	\PYG{k}{if} \PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZlt{}} \PYG{n}{y}\PYG{p}{)}
+	\PYG{p}{\PYGZob{}}
+		\PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}x is less than y!}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+	\PYG{p}{\PYGZcb{}}
+	\PYG{k}{else} \PYG{k}{if} \PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZgt{}} \PYG{n}{y}\PYG{p}{)}
+	\PYG{p}{\PYGZob{}}
+		\PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}x is greater than y!}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+	\PYG{p}{\PYGZcb{}}
+	\PYG{k}{else} \PYG{c+c1}{// if (x == y)}
+	\PYG{p}{\PYGZob{}}
+		\PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}x is equal to y!}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+	\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// Returns explicit value from main}
+
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}cs50.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{argc}\PYG{p}{,} \PYG{n}{string} \PYG{n}{argv}\PYG{p}{[])}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{argc} \PYG{o}{!=} \PYG{l+m+mi}{2}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}missing command\PYGZhy{}line argument}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+        \PYG{k}{return} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}hello, \PYGZpc{}s}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{argv}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]);}
+    \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// Draws a pyramid using iteration}
+
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}cs50.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+
+\PYG{k+kt}{void} \PYG{n+nf}{draw}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{h}\PYG{p}{);}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{// Get height of pyramid}
+    \PYG{k+kt}{int} \PYG{n}{height} \PYG{o}{=} \PYG{n}{get\PYGZus{}int}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Height: \PYGZdq{}}\PYG{p}{);}
+
+    \PYG{c+c1}{// Draw pyramid}
+    \PYG{n}{draw}\PYG{p}{(}\PYG{n}{height}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{void} \PYG{n+nf}{draw}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{h}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{// Draw pyramid of height h}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}=} \PYG{n}{h}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}=} \PYG{n}{i}\PYG{p}{;} \PYG{n}{j}\PYG{o}{++}\PYG{p}{)}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZsh{}\PYGZdq{}}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

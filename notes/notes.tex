@@ -1,84 +1,7 @@
-\documentclass[a4paper, 12pt]{report}
-\usepackage{graphicx}
-\usepackage{amsmath, amsthm, amssymb}
-\usepackage{enumerate}
-\usepackage{enumitem}
-\usepackage{array}
-\usepackage{tabularx}
-\usepackage{hyperref}
-\usepackage{caption}
-\usepackage[normalem]{ulem}
-\usepackage{pdfpages}
-\usepackage[toc,page]{appendix}
-\usepackage{float}
+%&preamble
 
-\usepackage[chapter,newfloat]{minted}
-\SetupFloatingEnvironment{listing}{name=Program}
-\SetupFloatingEnvironment{listing}{listname=List of Programs}
-
-%%% blank footnote
-\newcommand\blfootnote[1]{
-	\begingroup
-	\renewcommand\thefootnote{}\footnote{#1}
-	\addtocounter{footnote}{-1}
-	\endgroup
-}
-%%%
-
-%%% prevent hyphenation
-\tolerance=1
-\emergencystretch=\maxdimen
-\hyphenpenalty=10000
-\hbadness=10000
-%%%
-
-%%% make inline math look like display style math
-\everymath{\displaystyle}
-
-%%% minimize
-\DeclareMathOperator*{\minimize}{minimize}
-%%%
-
-% Theorem environments
-\newtheorem{theorem}{Theorem}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{observation}[theorem]{Observation}
-
-\theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{question}[theorem]{Question}
-
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-
-%%%
-\def\N{\mathbb{N}}
-\def\Z{\mathbb{Z}}
-\def\Q{\mathbb{Q}}
-\def\R{\mathbb{R}}
-\def\F{\mathbb{F}}
-
-\def\tends{\rightarrow}
-\def\into{\rightarrow}
-\def\half{\frac{1}{2}}
-\def\quarter{\frac{1}{4}}
-
-\newcommand{\set}[1]{\left\{ #1 \right\}}
-\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
-\newcommand{\card}[1]{\left\vert #1 \right\vert}
-\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
-\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
-
-\DeclareMathOperator{\dia}{dia}
-%%%
-
-\title{Notes\\
-\large Introduction to Computer Science (CS50) on EdX}
-\author{Sparsh Jain}
-\date{\today}
+% includeonly
+% \includeonly{chapters/algorithms}
 
 \begin{document}
 
@@ -92,6 +15,7 @@
 \include{chapters/scratch}
 \include{chapters/C}
 \include{chapters/arrays}
+\include{chapters/algorithms}
 
 %%% chapter endnote
 % \blfootnote{Check \href{lecture_pdf/Lecture1.pdf}{Lecture1.pdf} for more details.}

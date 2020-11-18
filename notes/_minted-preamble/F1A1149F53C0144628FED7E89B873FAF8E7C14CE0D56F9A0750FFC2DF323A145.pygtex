@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+		\PYG{k}{for} \PYG{n}{i} \PYG{n}{from} \PYG{l+m+mi}{0} \PYG{n}{to} \PYG{n}{n}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}
+			\PYG{k}{if} \PYG{n}{ith} \PYG{n}{element} \PYG{n}{is} \PYG{l+m+mi}{50}
+				\PYG{k}{return} \PYG{n+nb}{true}\PYG{p}{;}
+		\PYG{k}{return} \PYG{n+nb}{false}\PYG{p}{;}
+\end{Verbatim}

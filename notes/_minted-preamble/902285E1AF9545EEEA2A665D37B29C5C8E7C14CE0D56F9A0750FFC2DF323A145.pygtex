@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{for} \PYG{n}{i} \PYG{n}{from} \PYG{l+m+mi}{0} \PYG{n}{to} \PYG{n}{n}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}
+	\PYG{n}{find} \PYG{n}{smallest} \PYG{n}{item} \PYG{n}{between} \PYG{n}{ith} \PYG{n}{item} \PYG{n}{and} \PYG{n}{last} \PYG{n}{item}
+	\PYG{n}{swap} \PYG{n}{smallest} \PYG{n}{item} \PYG{n}{and} \PYG{n}{ith} \PYG{n}{item}
+\end{Verbatim}

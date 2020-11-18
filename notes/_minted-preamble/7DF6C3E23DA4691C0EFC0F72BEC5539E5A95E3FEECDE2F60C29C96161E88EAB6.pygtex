@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// Implements linear search for names}
+
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}cs50.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}string.h\PYGZgt{}}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{// An array of names}
+    \PYG{n}{string} \PYG{n}{names}\PYG{p}{[]} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s}{\PYGZdq{}EMMA\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}RODRIGO\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}BRIAN\PYGZdq{}}\PYG{p}{,} \PYG{l+s}{\PYGZdq{}DAVID\PYGZdq{}}\PYG{p}{\PYGZcb{};}
+
+    \PYG{c+c1}{// Search for EMMA}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{4}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{strcmp}\PYG{p}{(}\PYG{n}{names}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{l+s}{\PYGZdq{}EMMA\PYGZdq{}}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Found}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+            \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Not found}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{);}
+    \PYG{k}{return} \PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

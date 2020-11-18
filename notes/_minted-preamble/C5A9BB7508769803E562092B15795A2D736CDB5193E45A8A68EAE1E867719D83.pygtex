@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// Abstraction and scope}
+
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}cs50.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+
+\PYG{k+kt}{int} \PYG{n+nf}{get\PYGZus{}positive\PYGZus{}int}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{);}
+
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{n}{get\PYGZus{}positive\PYGZus{}int}\PYG{p}{();}
+    \PYG{n}{printf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}i}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{i}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// Prompt user for positive integer}
+\PYG{k+kt}{int} \PYG{n+nf}{get\PYGZus{}positive\PYGZus{}int}\PYG{p}{(}\PYG{k+kt}{void}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{;}
+    \PYG{k}{do}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{n} \PYG{o}{=} \PYG{n}{get\PYGZus{}int}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Positive Integer: \PYGZdq{}}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{while} \PYG{p}{(}\PYG{n}{n} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{);}
+    \PYG{k}{return} \PYG{n}{n}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

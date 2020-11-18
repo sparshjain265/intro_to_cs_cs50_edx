@@ -1,0 +1,200 @@
+\chapter{Algorithms}
+% 00:00:00 - Introduction
+% 00:01:22 - Weeks 2 Recap
+% 00:02:46 - Algorithms Demo
+% 00:04:05 - Algorithms Demo (Linear Search)
+% 00:06:14 - Algorithms Demo (Binary Search)
+% 00:08:34 - Linear Search
+\section{Linear Search}
+\begin{code}
+	\begin{minted}[linenos]{c}
+		for i from 0 to n-1
+			if ith element is 50
+				return true;
+		return false;
+	\end{minted}
+	\caption{Linear Search Pseudocode}
+\end{code}
+% 00:09:44 - Binary Search
+\section{Binary Search}
+\begin{code}
+	\begin{minted}[linenos]{c}
+		if no items 
+			return false;
+		if middle item is 50
+			return true;
+		else if 50 < middle item 
+			search left half
+		else if 50 > middle item
+			search right half
+	\end{minted}
+	\caption{Binary Search Pseudocode}
+\end{code}
+% 00:11:02 - Efficiency
+% 00:14:03 - Big O and Omega Notation
+\section{Efficiency}
+\subsection{\texorpdfstring{$\bigO$ Notation:}{}} Worst case scenario
+\begin{align*}
+	n^2        & : \bigO(n^2)                       \\
+	n\log_n{n} & : \bigO(n\log{n})                  \\
+	n          & : \bigO(n) \ (Linear Search)       \\
+	n/2        & : \bigO(n)                         \\
+	\log_2{n}  & : \bigO(\log{n}) \ (Binary Search) \\
+	{constant} & : \bigO(1)                         \\
+\end{align*}
+\subsection{\texorpdfstring{$\Omega$ Notation:}{}} Best case scenario
+\begin{align*}
+	 & \Omega(n^2)      \\
+	 & \Omega(n\log{n}) \\
+	 & \Omega(n)        \\
+	 & \Omega(n)        \\
+	 & \Omega(\log{n})  \\
+	 & \Omega(1)        \\
+\end{align*}
+
+Q: Better to have a really good $\bigO$ value or a really good $\Omega$ value?\\
+
+A: $\bigO$, or even \emph{average} case.
+
+\clearpage
+\section{Examples}
+\subsection{Linear Search}
+\subsubsection{Numbers}
+% 00:18:39 - numbers.c
+\begin{code}
+	\inputminted[linenos]{c}{codes/src3/numbers.c}
+	\caption{Linear Search on numbers}
+\end{code}
+% \clearpage
+\subsubsection{Names}
+% 00:21:11 - names.c
+\begin{code}
+	\inputminted[linenos]{c}{codes/src3/names0.c}
+	\caption{Linear Search on names}
+\end{code}
+% 00:26:14 - phonebook.c
+% \clearpage
+\subsection{Bad Design}
+Correct/Working code but bad design!
+\begin{code}
+	\inputminted[linenos,breaklines]{c}{codes/src3/phonebook0.c}
+	\caption{Linear Search in a phonebook}
+\end{code}
+% \clearpage
+% 00:31:40 - typedef (phonebook.c)
+\subsection{\texorpdfstring{Good Design - \mintinline{c}{typedef struct}}{}}
+Using \mintinline{c}{typedef struct} for better design!
+\begin{code}
+	\inputminted[linenos,breaklines]{c}{codes/src3/phonebook1.c}
+	\caption{Linear Search in phonebook with \mintinline{c}{typedef struct}}
+\end{code}
+
+% 00:37:21 - Sorting Demo
+% 00:43:45 - Bubble Sort
+\section{Bubble Sort}
+\begin{code}
+	\begin{minted}[linenos]{c}
+repeat n-1 times
+	for i = 0 to n-2
+		if ith and i+1th elements out of order
+			swap them
+	\end{minted}
+\end{code}
+\paragraph{$\bigO(n^2)$}
+\paragraph{$\Omega(n^2)$}
+% 00:48:08 - Selection Sort
+\section{Selection Sort}
+\begin{code}
+	\begin{minted}[linenos]{c}
+for i from 0 to n-1
+	find smallest item between ith item and last item
+	swap smallest item and ith item
+	\end{minted}
+\end{code}
+\paragraph{$\bigO(n^2)$}
+\paragraph{$\Omega(n^2)$}
+% 00:56:45 - Algorithm Running Times
+\clearpage
+\section{Better Bubble Sort}
+\begin{code}
+	\begin{minted}[linenos]{c}
+repeat until swap
+	for i = 0 to n-2
+		if ith and i+1th elements out of order
+			swap them
+	\end{minted}
+\end{code}
+\paragraph{$\bigO(n^2)$}
+\paragraph{$\Omega(n)$}
+% 01:01:56 - Elections
+% 01:03:38 - Recursion
+\section{Recursion}
+\begin{code}
+	\begin{minted}[linenos]{c}
+Pick up phone book
+Open to middle of phone book
+Look at page
+if Smith is on page
+	Call Mike
+else if Smith is earlier in book
+	Open to middle of left half of book
+	Go back to line 3
+else if Smith is later in book
+	Open to middle of right half of book
+	Go back to line 3
+else 
+	Quit
+	\end{minted}
+	\caption{Iteration Pseudocode}
+\end{code}
+
+Can we do a better design?
+
+\begin{code}
+	\begin{minted}[linenos]{c}
+Pick up phone book
+Open to middle of phone book
+Look at page
+if Smith is on page
+	Call Mike
+else if Smith is earlier in book
+	Search left half of book
+else if Smith is later in book
+	Search right half of book
+else 
+	Quit
+	\end{minted}
+	\caption{Recursion Pseudocode}
+\end{code}
+
+% 01:06:13 - iteration.c
+\begin{code}
+	\inputminted[linenos,breaklines]{c}{codes/src3/iteration.c}
+	\caption{Iteration C code}
+\end{code}
+% 01:10:28 - recursion.c
+\begin{code}
+	\inputminted[linenos,breaklines]{c}{codes/src3/recursion.c}
+	\caption{Recursion C code}
+\end{code}
+
+% 01:17:10 - Merge Sort
+\clearpage
+\section{Merge Sort}
+\begin{code}
+	\begin{minted}[linenos]{c}
+if only 1 item
+	return
+else
+	sort left half of items
+	sort right half of items
+	merge sorted halves
+	\end{minted}
+	\caption{Merge Sort Pseudocode}
+\end{code}
+\paragraph{$\bigO(n\log{n})$}
+\paragraph{$\Omega(n\log{n})$}
+% 01:26:18 - Theta Notation
+\subsection{\texorpdfstring{$\Theta$ Notation}{}}
+When $\bigO = \Omega$!
+% 01:27:06 - Random (Visualization)
