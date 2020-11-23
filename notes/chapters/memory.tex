@@ -1,0 +1,149 @@
+\chapter{Memory}
+Removing the training wheels \mintinline{c}{#include <cs50.h>} from now!
+
+\section{Hexadecimal}
+\paragraph{Digits:}$\set{1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F}$
+\paragraph{Ambiguity:} Prefix the number with $0x$
+
+\section{Addresses}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/address0.c}
+	\caption{integer}
+\end{code}
+
+\clearpage
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/address1.c}
+	\caption{address of an integer}
+\end{code}
+
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/address2.c}
+	\caption{address2.c}
+\end{code}
+
+\subsection{Operators}
+\begin{align*}
+	\mintinline{c}{   & }                          & = \text{Get the address} \\
+	\mintinline{c}{*} & = \text{Go to the address}                            \\
+\end{align*}
+
+\clearpage
+\section{Pointers}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/address3.c}
+	\caption{accessing an address}
+\end{code}
+
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/address4.c}
+	\caption{pointers}
+\end{code}
+
+\clearpage
+\section{Strings}
+There are no strings. Strings are just pointers.
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/address5.c}
+	\caption{strings}
+\end{code}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/address6.c}
+	\caption{strings are pointers}
+\end{code}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/address7.c}
+	\caption{strings are \mintinline{c}{char[]} \\
+		addresses are consecutive in arrays}
+\end{code}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/address8.c}
+	\caption{accessing characters in a string}
+\end{code}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/address10.c}
+	\caption{accessing characters in a \mintinline{c}{char *}}
+\end{code}
+
+\section{String Comparision}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/compare0.c}
+	\caption{comparing integers}
+\end{code}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/compare1.c}
+	\caption{attempting to compare strings directly}
+\end{code}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/compare4.c}
+	\caption{comparing strings properly}
+\end{code}
+
+\clearpage
+\section{String Copy}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/copy0.c}
+	\caption{attempting to copying strings directly}
+\end{code}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/copy1.c}
+	\caption{copy strings properly}
+\end{code}
+
+Just use \mintinline{c}{strcpy(target, source)} to copy strings.
+
+\section{Malloc and Free}
+\paragraph{\mintinline{c}{malloc}:} Allocate Memory and return its address.
+\paragraph{\mintinline{c}{free}:} Free Memory (prevent leaking).
+
+\section{Buffer Overflow}
+\begin{code}
+	\inputminted[linenos, breaklines, breakanywhere]{c}{codes/src4/memory.c}
+	\caption{buffer overflow}
+\end{code}
+
+\section{Swap}
+Pass by \emph{value} vs pass by \emph{reference}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/noswap.c}
+	\caption{naive attempt at swap}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/swap.c}
+	\caption{swap}
+\end{code}
+
+\clearpage
+\section{\texorpdfstring{\mintinline{c}{scanf}}{}}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/scanf0.c}
+	\caption{scanning an integer}
+\end{code}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/scanf1.c}
+	\caption{scanning a string in unintialized}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/scanf2.c}
+	\caption{scanning a long string in small array}
+\end{code}
+
+\section{File I/O}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/phonebook.c}
+	\caption{files in c}
+\end{code}
+\begin{code}
+	\inputminted[linenos, breaklines]{text}{codes/src4/phonebook.csv}
+	\caption{phonebook.csv}
+\end{code}
+\begin{code}
+	\inputminted[linenos, breaklines]{c}{codes/src4/jpeg.c}
+	\caption{check jpeg or not}
+\end{code}
+
+
+
+
