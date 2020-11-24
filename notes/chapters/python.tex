@@ -1,0 +1,232 @@
+\chapter{Python}
+\section{Introduction}
+\begin{code}
+	\inputminted{python}{codes/src6/1/hello.py}
+	\caption{Hello Python}
+\end{code}
+To run: \mintinline{bash}{$ python hello.py}
+\begin{code}
+	\inputminted{python}{codes/src6/1/string0.py}
+	\caption{strings in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/string1.py}
+	\caption{print function in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/string2.py}
+	\caption{format strings}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/int0.py}
+	\caption{integers in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/conditions.py}
+	\caption{comparisions in python}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted{python}{codes/src6/1/agree0.py}
+	\caption{logical operators in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/agree1.py}
+	\caption{convert string to lowercase in python}
+\end{code}
+\begin{code}
+	\begin{minted}{python}
+# Loops
+
+while True:
+	print("hello, world")
+	\end{minted}
+	\caption{while loop in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/cough1.py}
+	\caption{for loop and \mintinline{python}{range} in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/cough2.py}
+	\caption{functions in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/cough3.py}
+	\caption{arguments to functions in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/positive.py}
+	\caption{scopes in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/mario0.py}
+	\caption{named arguments in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/mario1.py}
+	\caption{multiplying a string: pythonic}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted{python}{codes/src6/1/mario4.py}
+	\caption{nested loops in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/string3.py}
+	\caption{input strings in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/int1.py}
+	\caption{input integers in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/1/overflow.py}
+	\caption{overflow in python?}
+\end{code}
+\begin{remark}
+	No limit of ints in python!
+\end{remark}
+\begin{code}
+	\inputminted{python}{codes/src6/2/scores0.py}
+	\caption{lists in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/2/scores1.py}
+	\caption{directly using lists in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/2/string0.py}
+	\caption{access characters of a string in python}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted{python}{codes/src6/2/string1.py}
+	\caption{accessing characters of a string directly in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/2/uppercase.py}
+	\caption{changing to uppercase in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/2/argv0.py}
+	\caption{command line arguments in python}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted{python}{codes/src6/2/argv1.py}
+	\caption{directly accessing command line arguments in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/2/exit0.py}
+	\caption{exiting on error in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/3/names.py}
+	\caption{searching in a list in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/3/phonebook.py}
+	\caption{dictionary in python}
+\end{code}
+\begin{remark}
+	A \emph{dictionary} (key/value pair) are also known as associative arrays.
+\end{remark}
+\begin{code}
+	\inputminted{python}{codes/src6/4/compare.py}
+	\caption{string comparision in python}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted{python}{codes/src6/4/swap.py}
+	\caption{swapping values in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/4/phonebook0.py}
+	\caption{files in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/4/phonebook1.py}
+	\caption{\mintinline{python}{with} in python}
+\end{code}
+
+\section{Datatypes}
+\begin{itemize}
+	\item bool
+	\item float
+	\item int
+	\item str $\equiv$ string
+	\item range $\equiv$ sequence of numbers
+	\item list $\equiv$ sequence of mutable values
+	\item tuple $\equiv$ sequence of immutable values
+	\item dict $\equiv$ collection of key/value pairs
+	\item set $\equiv$ collection of unique values
+	\item \dots
+\end{itemize}
+
+\clearpage
+\section{Previous assignments from C to python}
+\begin{code}
+	\inputminted{python}{codes/src6/6/filter/blur.py}
+	\caption{blur.py: blur an image}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src6/6/speller/dictionary.py}
+	\caption{dictionary.py: implement a dictionary}
+\end{code}
+% \begin{code}
+% 	\inputminted{python}{codes/src6/6/speller/speller.py}
+% 	\caption{speller.py: runner code for dictionary}
+% \end{code}
+
+\section{Regular Expressions}
+\begin{tabular}{l l}
+	.    & any character        \\
+	.*   & 0 or more characters \\
+	.+   & 1 or more characters \\
+	?    & optional             \\
+	\\
+	\^{} & start of input       \\
+	\$   & end of input         \\
+	\\
+	\dots
+\end{tabular}
+\begin{code}
+	\inputminted{python}{codes/src6/1/agree2.py}
+	\caption{regex in python}
+\end{code}
+
+\clearpage
+\section{Fancier stuff: Hardware usage}
+\begin{code}
+	\inputminted{python}{codes/src6/6/voices/voices0.py}
+	\caption{extremely simple AI}
+\end{code}
+
+\begin{code}
+	\inputminted{python}{codes/src6/6/voices/voices1.py}
+	\caption{speach recognition in python}
+\end{code}
+
+\clearpage
+\begin{code}
+	\inputminted{python}{codes/src6/6/voices/voices2.py}
+	\caption{reply with speach recognition in python}
+\end{code}
+
+\begin{code}
+	\inputminted{python}{codes/src6/6/voices/voices3.py}
+	\caption{iteractive speach recognition in python}
+\end{code}
+
+We can:
+\begin{itemize}
+	\item \href{codes/src6/6/faces/detect.py}{Detect} all the faces in a photo.
+	\item \href{codes/src6/6/faces/recognize.py}{Recognize} a face.
+	\item Create a \href{codes/src6/6/qr/qr.py}{QR} code.
+\end{itemize}
+
+
+
+
+

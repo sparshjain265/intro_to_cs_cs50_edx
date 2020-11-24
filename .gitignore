@@ -10,6 +10,7 @@
 *.blg
 *.lol
 *.fmt
+*.pyg
 .latexmkrc
 _minted-notes
 _minted-preamble
