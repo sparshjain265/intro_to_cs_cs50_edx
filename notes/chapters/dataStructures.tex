@@ -1,0 +1,125 @@
+\chapter{Data Structures}
+\section{Arrays}
+\begin{itemize}
+	\item Fixed size
+	\item Resizing $\equiv$ Relocating
+	\item This implies insert $= \bigO(n)$
+	\item Search $= \bigO(\log n)$
+\end{itemize}
+\begin{code}
+	\inputminted{c}{codes/src5/list0.c}
+	\caption{array with hardcoded size}
+\end{code}
+\begin{code}
+	\inputminted{c}{codes/src5/list1.c}
+	\caption{array with dynamic size using \mintinline{c}{malloc}}
+\end{code}
+\begin{code}
+	\inputminted{c}{codes/src5/list2.c}
+	\caption{array with dynamic size using \mintinline{c}{realloc}}
+\end{code}
+
+\section{Data Structures}
+Structures to store data. In \emph{c}, it basically revolves around
+\begin{itemize}
+	\item \mintinline{c}{struct}
+	\item \mintinline{c}{.}
+	\item \mintinline{c}{*}
+\end{itemize}
+
+\section{Linked List}
+\begin{code}
+	\inputminted{c}{codes/src5/list3.c}
+	\caption{linked list}
+\end{code}
+We have now lost random access. So:
+\begin{itemize}
+	\item Search $= \bigO(n)$
+	\item Insert $= \bigO(n)$
+\end{itemize}
+
+\section{Tree}
+Think of as multi-dimensional linked lists.
+\subsection{Binary Search Tree}
+\begin{code}
+	\begin{minted}{c}
+typedef struct node
+{
+	int number;
+	struct node *left;
+	struct node *right;
+}
+node;
+	\end{minted}
+	\caption{node for a binary tree}
+\end{code}
+\clearpage
+\begin{code}
+	\begin{minted}{c}
+bool search(node *tree, int n)
+{
+	if (tree == NULL)
+	{
+		return false;
+	}
+	else if (n < tree->number)
+	{
+		return search(tree->left);
+	}
+	else if (n > tree->number)
+	{
+		return search(tree->right);
+	}
+	else 
+	{
+		return true;
+	}
+}
+	\end{minted}
+	\caption{search in a binary-search-tree}
+\end{code}
+
+So, time complexity here:
+\begin{itemize}
+	\item Search $= \bigO(\log n)$
+	\item Insert $= \bigO(\log n)$ - need to balance the tree
+\end{itemize}
+
+\section{Hash Table}
+Hoping for the best
+\begin{itemize}
+	\item Search $\tends \bigO(1)$, can actually be $\bigO(n)$
+	      if we get really unlucky.
+\end{itemize}
+
+\section{Trie}
+A tree who nodes are arrays! Time complexity:
+\begin{itemize}
+	\item Search $= \bigO(1)$
+	\item Insert $= \bigO(1)$
+\end{itemize}
+
+\section{Queue}
+First In First Out
+\begin{itemize}
+	\item enqueue
+	\item dequeue
+\end{itemize}
+
+\section{Stack}
+Last In First Out
+\begin{itemize}
+	\item push
+	\item pop
+\end{itemize}
+
+\section{Dictionary}
+An abstraction on top of hash table.
+Has \emph{keys} and \emph{values}.
+
+
+
+
+
+
+
