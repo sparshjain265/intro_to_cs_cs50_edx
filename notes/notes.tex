@@ -1,7 +1,7 @@
 %&preamble
 
 % includeonly
-% \includeonly{chapters/sql}
+\includeonly{chapters/summary}
 
 \begin{document}
 
@@ -9,7 +9,6 @@
 \tableofcontents
 % \listoffigures
 % \listoftables
-\listoflistings
 
 % \include{chapters/introduction}
 \include{chapters/scratch}
@@ -20,11 +19,17 @@
 \include{chapters/dataStructures}
 \include{chapters/python}
 \include{chapters/sql}
+\include{chapters/summary}
 
 %%% chapter endnote
 % \blfootnote{Check \href{lecture_pdf/Lecture1.pdf}{Lecture1.pdf} for more details.}
 
-% \begin{appendices}
-% \end{appendices}
+\cleardoublepage
+\begin{appendices}
+	\phantomsection
+	\addcontentsline{toc}{chapter}{\listlistingname}
+	\listoflistings
+\end{appendices}
+
 
 \end{document}
