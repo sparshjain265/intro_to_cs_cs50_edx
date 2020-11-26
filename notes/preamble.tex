@@ -13,7 +13,9 @@
 \usepackage[toc,page]{appendix}
 \usepackage{float}
 
-\usepackage[chapter,newfloat]{minted}
+\usepackage{csvsimple}
+
+\usepackage[chapter,newfloat,cache,cachedir=_minted-cache]{minted}
 \SetupFloatingEnvironment{listing}{name=Program}
 \SetupFloatingEnvironment{listing}{listname=List of Programs}
 \newenvironment{code}{\captionsetup{type=listing}}{}

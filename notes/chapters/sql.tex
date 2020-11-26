@@ -1,0 +1,197 @@
+\chapter{Database}
+\section{csv files}
+\begin{code}
+	\inputminted{python}{codes/src7/favorites0.py}
+	\caption{Read a csv file in python}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted{python}{codes/src7/favorites1.py}
+	\caption{Use a dictionary to count in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src7/favorites2.py}
+	\caption{Print sorted dictionary by 'keys' in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src7/favorites3.py}
+	\caption{Print sorted dictionary by 'values' in python}
+\end{code}
+\begin{code}
+	\inputminted{python}{codes/src7/favorites4.py}
+	\caption{lambda function in python}
+\end{code}
+
+\section{SQL}
+\subsection{Example}
+Open as \mintinline{bash}{sqlite3 <dbname>}:
+\begin{code}
+	\begin{minted}{sql}
+.mode csv
+.import <filename> <tablename>
+	\end{minted}
+	\caption{load a csv to a db in sqlite3}
+\end{code}
+Now we can ask the same kind of questions:
+\begin{code}
+	\begin{minted}{sql}
+SELECT title FROM favorites;
+SELECT title FROM favorites ORDER BY title;
+SELECT title, COUNT(title) FROM favorites GROUP BY title;
+SELECT title, COUNT(title) FROM favorites GROUP BY title LIMIT 10;
+SELECT title, COUNT(title) AS n FROM favorites GROUP BY title LIMIT 10;
+SELECT title, COUNT(title) AS n FROM favorites GROUP BY title ORDER BY n DESC LIMIT 10;
+	\end{minted}
+	\caption{SQL querries in sqlite3}
+\end{code}
+
+\subsection{Relational Database}
+With any form of data, there are four fundamental operations:
+\begin{enumerate}
+	\item[C:] Create
+	\item[R:] Read
+	\item[U:] Update
+	\item[D:] Delete
+\end{enumerate}
+\emph{Structured Query Language} is just another programming language
+mainly used for databases, has keywords attached to these:
+\begin{enumerate}
+	\item INSERT
+	\item SELECT
+	\item UPDATE
+	\item DELETE \\
+	      \dots
+\end{enumerate}
+
+\subsection{Syntax}
+\subsubsection{Datatypes:}
+\begin{enumerate}
+	\item BLOB - Binary Large Object
+	\item INTEGER
+	      \begin{enumerate}
+		      \item smallint
+		      \item integer
+		      \item bigint
+	      \end{enumerate}
+	\item NUMERIC
+	      \begin{enumerate}
+		      \item boolean
+		      \item date
+		      \item datetime
+		      \item numeric(scale,precision)
+		      \item time
+		      \item timestamp
+	      \end{enumerate}
+	\item REAL
+	      \begin{enumerate}
+		      \item real
+		      \item double precision
+	      \end{enumerate}
+	\item TEXT
+	      \begin{enumerate}
+		      \item char(n)
+		      \item varchar(n)
+		      \item text
+	      \end{enumerate}
+\end{enumerate}
+\subsubsection{Functions}
+\begin{enumerate}
+	\item AVG
+	\item COUNT
+	\item DISTINCT
+	\item MAX
+	\item MIN\\
+	      \dots
+\end{enumerate}
+\subsubsection{Features}
+\begin{enumerate}
+	\item WHERE
+	\item LIKE
+	\item LIMIT
+	\item GROUP BY
+	\item ORDER BY
+	\item JOIN\\
+	      \dots
+\end{enumerate}
+\begin{code}
+	\begin{minted}{sql}
+CREATE TABLE table (column type, |\dots|);
+INSERT INTO table (column, |\dots|) VALUES (value, |\dots|);
+SELECT columns FROM table;
+SELECT title FROM favorites WHERE title LIKE "%office%";
+SELECT COUNT(title) FROM favorites WHERE title LIKE "%office%";
+SELECT columns FROM table WHERE condition;
+UPDATE table SET column=value WHERE condition;
+DELETE FROM table WHERE condition;
+	\end{minted}
+	\caption{SQL Syntax}
+\end{code}
+
+\clearpage
+\subsection{Huge Database}
+Design decisions really gonna matter. Download "title.basic.tsv.gz" for example.
+\subsubsection{Fields}
+\begin{enumerate}
+	\item tcost : tt4786824
+	\item tytleType : tvSeries
+	\item primaryTitle : The Crown
+	\item startYear : 2016
+	\item genres : Drama, History
+\end{enumerate}
+
+\begin{code}
+	\inputminted{python}{codes/src7/import2.py}
+	\caption{filtering the database in python}
+\end{code}
+
+\begin{code}
+	\inputminted{python}{codes/src7/search.py}
+	\caption{searching the database in python}
+\end{code}
+
+\clearpage
+\begin{code}
+	\inputminted{python}{codes/src7/import3.py}
+	\caption{using SQL in python}
+\end{code}
+
+\begin{code}
+	\inputminted{python}{codes/src7/import4.py}
+	\caption{import to multiple tables in SQL using python}
+\end{code}
+
+\begin{code}
+	\begin{minted}{sql}
+SELECT * FROM shows WHERE id IN (SELECT show_id FROM genres WHERE genre = "Comedy") AND year = 2019;
+	\end{minted}
+	\caption{query with multiple tables in SQL}
+\end{code}
+
+\begin{code}
+	\begin{minted}{sql}
+CREATE INDEX person_index ON stars (person_id);
+	\end{minted}
+	\caption{indexing in sql}
+\end{code}
+
+\section{Problems}
+\subsection{Race Conditions}
+Solution? \emph{Transactions}
+
+\subsection{SQL Injection Attacks}
+Solution? \emph{Sanitize your inputs}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
