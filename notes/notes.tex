@@ -1,7 +1,7 @@
 %&preamble
 
 % includeonly
-\includeonly{chapters/summary}
+% \includeonly{chapters/web/homepage}
 
 \begin{document}
 
@@ -11,6 +11,7 @@
 % \listoftables
 
 % \include{chapters/introduction}
+\part{General}
 \include{chapters/scratch}
 \include{chapters/C}
 \include{chapters/arrays}
@@ -21,14 +22,20 @@
 \include{chapters/sql}
 \include{chapters/summary}
 
+\part{Web}
+\include{chapters/web/intro}
+\include{chapters/web/html}
+\include{chapters/web/css}
+\include{chapters/web/javascript}
+% \include{chapters/web/homepage}
+
 %%% chapter endnote
 % \blfootnote{Check \href{lecture_pdf/Lecture1.pdf}{Lecture1.pdf} for more details.}
 
 \cleardoublepage
 \begin{appendices}
-	\phantomsection
-	\addcontentsline{toc}{chapter}{\listlistingname}
-	\listoflistings
+	\addcontentsline{toc}{chapter}{\listprogramname}
+	\listofprograms
 \end{appendices}
 
 

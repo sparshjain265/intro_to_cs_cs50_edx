@@ -12,21 +12,25 @@
 \usepackage{pdfpages}
 \usepackage[toc,page]{appendix}
 \usepackage{float}
+\usepackage[titles]{tocloft}
 \usepackage{csvsimple}
 
-%%% if list of contents/figures/etc exceed 2 digits
+%%% for minted
+\usepackage[chapter,newfloat,cache,cachedir=_minted-cache]{minted}
+\newlistof{program}{lop}{List of Programs}
+\newenvironment{code}{\captionsetup{type=program}}{}
+\DeclareFloatingEnvironment[name=Program, fileext=lop]{program}
+\setlength{\cftprogramnumwidth}{3em}
+\setminted{linenos, autogobble,
+    breaklines, breakbefore=(.\{, breakafter=)\}, breakanywhere,
+    mathescape, escapeinside=||}
+\setmintedinline{breaklines, breakanywhere, mathescape, escapeinside=||}
+
+%%% if page number in list of contents/figures/etc exceed 2 digits
 \makeatletter
 \renewcommand{\@pnumwidth}{3em}
 \renewcommand{\@tocrmarg}{4em}
 \makeatother
-
-%%% for minted
-\usepackage[chapter,newfloat,cache,cachedir=_minted-cache]{minted}
-\SetupFloatingEnvironment{listing}{name=Program}
-\SetupFloatingEnvironment{listing}{listname=List of Programs}
-\newenvironment{code}{\captionsetup{type=listing}}{}
-\setminted{linenos, breaklines, breakanywhere, mathescape, escapeinside=||}
-\setmintedinline{breaklines, breakanywhere, mathescape, escapeinside=||}
 
 %%% blank footnote
 \newcommand\blfootnote[1]{

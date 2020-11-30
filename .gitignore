@@ -12,6 +12,7 @@
 *.fmt
 *.pyg
 *.db
+*.lop
 .latexmkrc
 _minted-*
 *.zip
