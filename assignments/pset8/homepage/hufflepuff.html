@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Hufflepuff</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Hogwartscrest.png" alt="Hogwarts" height="50">
+            </a>
+        </div>
+    </nav>
+    <div class="col d-flex justify-content-center">
+        <div class="card-deck" style="width: fit-content;">
+            <div id="hufflepuff-card" class="card transparent-card">
+                <a class="card-block stretched-link text-decoration-none" href="hufflepuff.html">
+                    <img class="card-img-top" src="images/Hufflepuff_ClearBG.png" alt="Hufflepuff">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            <div class="btn btn-lg hufflepuff">
+                                Hufflepuff
+                            </div><br>
+                            <div id="hufflepuff-points" class="btn btn-lg hufflepuff">
+                                0
+                            </div>
+                        </h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col d-flex justify-content-center">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-lg hufflepuff" onclick="inc('hufflepuff', 1);">Add 1 Point</button>
+            <button type="button" class="btn btn-lg hufflepuff" onclick="inc('hufflepuff', 5);">Add 5 Points</button>
+            <button type="button" class="btn btn-lg hufflepuff" onclick="inc('hufflepuff', 10);">Add 10 Points</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>display();</script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script>
+        let points = JSON.parse(localStorage.getItem("points"));
+        if (points == null)
+            points = { gryffindor: 0, hufflepuff: 0, ravenclaw: 0, slytherin: 0 };
+        localStorage.setItem("points", JSON.stringify(points));
+    </script>
+    <title>Hogwarts</title>
+</head>
+
+<body>
+    <div class="text-center">
+        <img src="images/hogwarts_banner.png" class="rounded banner"
+            alt="Welcome to Hogwarts; Credits: https://www.deviantart.com/uprisen257/art/Harry-Potter-Hogwarts-Banner-213912478"
+            title="Credits: https://www.deviantart.com/uprisen257/art/Harry-Potter-Hogwarts-Banner-213912478">
+    </div>
+    <div class="card-deck fill_parent">
+        <div id="gryffindor-card" class="card transparent-card">
+            <a class="card-block stretched-link text-decoration-none" href="gryffindor.html">
+                <img class="card-img-top" src="images/Gryffindor_ClearBG.png" alt="Gryffindor">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        <div class="btn btn-lg gryffindor">
+                            Gryffindor
+                        </div><br>
+                        <div id="gryffindor-points" class="btn btn-lg gryffindor">
+                            0
+                        </div>
+                    </h5>
+                </div>
+            </a>
+        </div>
+        <div id="hufflepuff-card" class="card transparent-card">
+            <a class="card-block stretched-link text-decoration-none" href="hufflepuff.html">
+                <img class="card-img-top" src="images/Hufflepuff_ClearBG.png" alt="Hufflepuff">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        <div class="btn btn-lg hufflepuff">
+                            Hufflepuff
+                        </div><br>
+                        <div id="hufflepuff-points" class="btn btn-lg hufflepuff">
+                            0
+                        </div>
+                    </h5>
+                </div>
+            </a>
+        </div>
+        <div id="ravenclaw-card" class="card transparent-card">
+            <a class="card-block stretched-link text-decoration-none" href="ravenclaw.html">
+                <img class="card-img-top" src="images/Ravenclaw_ClearBG.png" alt="Ravenclaw">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        <div class="btn btn-lg ravenclaw">
+                            Ravenclaw
+                        </div><br>
+                        <div id="ravenclaw-points" class="btn btn-lg ravenclaw">
+                            0
+                        </div>
+                    </h5>
+                </div>
+            </a>
+        </div>
+        <div id="slytherin-card" class="card transparent-card">
+            <a class="card-block stretched-link text-decoration-none" href="slytherin.html">
+                <img class="card-img-top" src="images/Slytherin_ClearBG.png" alt="Slytherin">
+                <div class="card-body">
+                    <h5 class="card-title text-center">
+                        <div class="btn btn-lg slytherin">
+                            Slytherin
+                        </div><br>
+                        <div id="slytherin-points" class="btn btn-lg slytherin">
+                            0
+                        </div>
+                    </h5>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <h1 style="color: silver;">Welcome to Hogwarts!</h1>
+        <h2 style="color: honeydew;">You are a professor!</h2>
+        <h3 style="color: lavender;">You can award House Points!</h3>
+        <h4 style="color: skyblue;">House Points of all four houses can be seen above!</h4>
+        <p>To award points to a particular house, click on their card and add points to their respective houses!</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>display();</script>
+</body>
+
+</html>

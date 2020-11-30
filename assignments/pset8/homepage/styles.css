@@ -1,0 +1,50 @@
+body{
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fill_parent{
+    width: 100%;
+}
+.banner{
+    width: 100%;
+}
+.transparent-card{
+    background-color: inherit;
+}
+.card{
+    border-radius: 4px;
+    /* background: #fff; */
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    padding: 14px 80px 18px 36px;
+    cursor: pointer;
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.gryffindor{
+    background-color: #740001; 
+    color: #d3a625;
+    padding: 5px;
+    margin: 10px;
+}
+.hufflepuff{
+    background-color: #ecb939; 
+    color: #000000;
+    padding: 5px;
+    margin: 10px;
+}
+.ravenclaw{
+    background-color: #0e1a40; 
+    color: #946b2d;
+    padding: 5px;
+    margin: 10px;
+}
+.slytherin{
+    background-color: #1a472a; 
+    color: #aaaaaa;
+    padding: 5px;
+    margin: 10px;
+}
