@@ -1,0 +1,136 @@
+\chapter{Flask}
+Python based framework to write our own web-server.
+
+\section{Hello World}
+
+\begin{remark}
+	It is conventional to name the file `application.py'.
+\end{remark}
+
+\begin{code}
+	\inputminted{python}{codes/web/flask/hello0/application.py}
+	\caption{Hello World in Flask}
+	\label{helloWorldFlask}
+\end{code}
+
+In Program~\ref{helloWorldFlask} variable \mintinline{python}{app} represents
+the web application we will run, and \mintinline{python}{__name__} represents
+the current file/program. For every route (path), we define a function to return
+the content we want while visiting that route.
+
+To run your web application, when you are in the directory, you can type
+\mintinline{bash}{flash run} to run the web application.
+
+\begin{remark}
+	You might want to set the following environment variables first:
+	\begin{enumerate}
+		\item \mintinline{bash}{export FLASK_APP=application.py}
+		\item \mintinline{bash}{export FLASK_ENV=development}
+	\end{enumerate}
+\end{remark}
+
+\begin{remark}
+	You can return any HTML that you want!
+\end{remark}
+
+\section{Templates}
+Use templates to use external HTML files in Flask!
+
+\begin{code}
+	\inputminted{python}{codes/web/flask/hello1/application.py}
+	\caption{Templates in Flask}
+\end{code}
+
+\section{Variables}
+\subsection{String}
+\begin{code}
+	\inputminted{python}{codes/web/flask/hello2/application.py}
+	\caption{Variables in Flask}
+\end{code}
+\begin{code}
+	\inputminted{html}{codes/web/flask/hello2/templates/index.html}
+	\caption{Jinja syntax for (flask) variables in HTML}
+\end{code}
+
+\subsection{Random Numbers}
+\begin{code}
+	\inputminted{python}{codes/web/flask/random/application.py}
+	\caption{Passing Random Numbers from Flask}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted{html}{codes/web/flask/random/templates/index.html}
+	\caption{Displaying random numbers in HTML}
+\end{code}
+
+\section{Conditions}
+\subsection{Coin Flip}
+\begin{code}
+	\inputminted{python}{codes/web/flask/coin/application.py}
+	\caption{Coin Flipping in flask}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted{html}{codes/web/flask/coin/templates/index.html}
+\end{code}
+
+\section{Interactive Webpage}
+\subsection{Forms}
+\begin{code}
+	\inputminted{python}{codes/web/flask/hello3/application.py}
+	\caption{Requesting arguments in flask}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted{html}{codes/web/flask/hello3/templates/index.html}
+	\caption{Requesting name in HTML}
+\end{code}
+\begin{code}
+	\inputminted{html}{codes/web/flask/hello3/templates/hello.html}
+	\caption{Hello (name) in HTML}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted{html}{codes/web/flask/hello3/templates/failure.html}
+	\caption{Failure page in HTML}
+\end{code}
+
+\clearpage
+\section{Layouts}
+Use layouts to include common HTML code.
+\begin{code}
+	\inputminted{html}{codes/web/flask/hello4/templates/layout.html}
+	\caption{Layout HTML}
+\end{code}
+\begin{code}
+	\inputminted{html}{codes/web/flask/hello4/templates/index.html}
+	\caption{Requesting name in HTML that extends layout}
+\end{code}
+\begin{code}
+	\inputminted{html}{codes/web/flask/hello4/templates/hello.html}
+	\caption{Displaying name in HTML that extends layout}
+\end{code}
+\begin{code}
+	\inputminted{html}{codes/web/flask/hello4/templates/failure.html}
+	\caption{Failure message in HTML that extends layout}
+\end{code}
+
+\section{Tasks Application}
+\begin{code}
+	\inputminted{python}{codes/web/flask/tasks/application.py}
+	\caption{Tasks Application using Flask}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted{html}{codes/web/flask/tasks/templates/layout.html}
+	\caption{Layout for the tasks application}
+\end{code}
+\begin{code}
+	\inputminted{html}{codes/web/flask/tasks/templates/tasks.html}
+	\caption{Default page for the tasks application}
+\end{code}
+\clearpage
+\begin{code}
+	\inputminted{html}{codes/web/flask/tasks/templates/add.html}
+	\caption{Add page for the tasks application}
+\end{code}
