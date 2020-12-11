@@ -16,4 +16,5 @@
 .latexmkrc
 _minted-*
 *.zip
-
+cs50
+cs50_setup_ubuntu.sh

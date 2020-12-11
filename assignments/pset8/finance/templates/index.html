@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+Portfolio
+{% endblock title %}
+
+
+{% block main %}
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Symbol</th>
+			<th>Name</th>
+			<th>Shares</th>
+			<th>Price</th>
+			<th>TOTAL</th>
+			<th>Buy</th>
+			<th>Sell</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<td colspan="4"></td>
+			<td>{{total}}</td>
+		</tr>
+	</tfoot>
+	<tbody>
+
+		{% for r in response %}
+		<tr>
+			<td>{{r['symbol']}}</td>
+			<td>{{r['name']}}</td>
+			<td>{{r['shares']}}</td>
+			<td>{{r['price']}}</td>
+			<td>{{r['total']}}</td>
+			<form action="/buy" method="GET">
+				<td><button class="btn btn-primary" name="value" value="{{r['symbol']}}">Buy</button></td>
+			</form>
+			<form action="/sell" method="GET">
+				<td><button class="btn btn-primary" name="value" value="{{r['symbol']}}">Sell</button></td>
+			</form>
+		</tr>
+		{% endfor %}
+
+		<tr>
+			<td colspan="4">CASH</td>
+			<td>{{cash}}</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+{% endblock main %}

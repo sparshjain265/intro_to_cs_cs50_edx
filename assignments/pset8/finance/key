@@ -1,0 +1,4 @@
+#!/user/bin/bash
+export FLASK_APP=application.py
+export FLASK_ENV=development
+export API_KEY=pk_351446d04bc142a0874c67b820324546
