@@ -1,0 +1,177 @@
+\chapter{Java}
+\section{Introduction}
+Use Android Studio (IDE) to build android apps. Convention for package name is
+your domain name in reverse followed by app name. Use androidx (newer version
+android libraries). Also need to create AVD (Android Virtual Device) to simulate
+an android device to run your app. Use Java to code.
+
+\section{Data Types}
+\begin{itemize}
+	\item \mintinline{java}{boolean}
+	\item \mintinline{java}{double}, \mintinline{java}{float}
+	\item \mintinline{java}{char}
+	\item \mintinline{java}{int}
+	\item \mintinline{java}{List}
+	\item \mintinline{java}{Map}
+	\item \mintinline{java}{String}
+	\item \dots
+\end{itemize}
+
+\section{Examples}
+\begin{code}
+	\begin{minted}{java}
+		String title = "CS50";
+		int count = 50;
+		count += 5;
+
+		String title = "iOS";
+		if (title.equals("iOS")) {
+			System.out.println("Good Choice");
+		}
+		else {
+			System.out.println("Maybe Next Time");
+		}
+
+		int[] values = new int[]{1, 2, 3};
+		for (int i = 0; i < values.length; i++){
+			System.out.println(i);
+		}
+	\end{minted}
+	\caption{First few lines of java}
+\end{code}
+
+\section{Generics}
+\subsection{Lists}
+\begin{code}
+	\begin{minted}{java}
+		List<String> values = new ArrayList<>();
+		values.add("one");
+		values.add("two");
+		for (String value : values){
+			System.out.println(value);
+		}
+	\end{minted}
+	\caption{Lists in java using Generics}
+\end{code}
+
+\subsection{Maps}
+\begin{code}
+	\begin{minted}{java}
+		Map<String, String> airports = new HashMap<>();
+		airports.put("SFO", "San Francisco");
+		airports.put("BOS", "Boston");
+		for (Map.Entry<String, String> e : airports.entrySet()) {
+			System.out.println(e.getKey() + ": " + e.getValue());
+		}
+	\end{minted}
+	\caption{Maps in java using Generics}
+\end{code}
+
+\section{Classes}
+structs + functions/methods = class
+
+\begin{code}
+	\begin{minted}{java}
+		public class Person {
+			String name;
+
+			Person(String name) {
+				this.name = name;
+			}
+
+			public void sayHello() {
+				System.out.println("I'm " + name);
+			}
+		}
+
+		Person person = new Person("Tommy");
+		person.sayHello();
+	\end{minted}
+	\caption{Classes in java}
+\end{code}
+
+\section{Static Methods}
+Can be called from a class, without having an instance of it.
+
+\begin{code}
+	\begin{minted}{java}
+		public class Person {
+			|\dots|
+			public static void wave() {
+				System.out.println("Wave");
+			}
+		}
+
+		Person.wave();
+	\end{minted}
+	\caption{Static Methods in java}
+\end{code}
+
+\clearpage
+\section{Inheritance}
+\begin{code}
+	\begin{minted}{java}
+		public class Vehicle {
+			public int wheels() {
+				return 4;
+			}
+
+			public void go() {
+				System.out.println("zoom!");
+			}
+		}
+
+		public class Motorcycle extends Vehicle {
+			@Override
+			public int wheels() {
+				return 2;
+			}
+		}
+	\end{minted}
+	\caption{Inheritance in Java Classes}
+\end{code}
+
+\section{Interfaces}
+Basically a list of methods to implement in classes. If we forget, compiler raises
+an error.
+\begin{code}
+	\begin{minted}{java}
+		public interface Teacher() {
+			public void teach();
+		}
+
+		public class CS50Teacher implements Teacher {
+			@Override
+			public void teach() {
+				|\dots|
+			}
+		}
+	\end{minted}
+	\caption{Interfaces in Java Classes}
+\end{code}
+
+\begin{remark}
+	We can implement multiple interfaces but only extend one class.
+\end{remark}
+
+\section{Packages}
+Sort of a way to organise java code.
+\begin{code}
+	\begin{minted}{java}
+		package edu.harvard.cs50.example;
+
+		import java.util.List; 
+	\end{minted}
+	\caption{Packages in Java}
+\end{code}
+
+\section{Android}
+\begin{code}
+	\inputminted{java}{codes/android/javaexample/app/src/main/java/com/example/javaexample/House.java}
+	\caption{House class in Java}
+\end{code}
+\pagebreak
+\begin{code}
+	\inputminted{java}{codes/android/javaexample/app/src/main/java/com/example/javaexample/MainActivity.java}
+	\caption{Example Android Application in Java}
+\end{code}
