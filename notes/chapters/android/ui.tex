@@ -1,0 +1,133 @@
+\chapter{UI}
+\section{Gradle}
+Open Source Project - an Android Build System!
+
+\section{MVC}
+Model - View - Controller.
+
+Design Pattern that advocates separating out the app in three different
+pieces.
+
+\section{Activities}
+Sort of a base class for a screen.
+
+\section{Resources}
+All the stuff that isn't code!
+Example? Layout!
+
+\section{Layouts}
+A layout describes how a view should look.
+Defined using XML.
+
+\section{XML}
+eXtensible Markup Language.
+\begin{code}
+	\begin{minted}{xml}
+		<LinearLayout>
+		<TextView android:text="Hello" />
+		</LinearLayout>
+	\end{minted}
+	\caption{sample XML code}
+\end{code}
+
+\section{Intent}
+Special object that represents a way to go from one activity to another.
+
+\section{Recycler View}
+It basically represents anything that's a list of items.
+
+\section{App Files}
+From our \emph{Pokedex} App.
+\subsection{Manifests}
+\subsubsection{AndroidManifest.xml}
+Basically a configuration file.
+\begin{code}
+	\inputminted{xml}{codes/android/Pokedex/app/src/main/AndroidManifest.xml}
+	\caption{App Files : Manifests : AndroidManifest.xml}
+\end{code}
+\subsection{Java Codes}
+Code like we've seen before.
+\subsection{Layouts}
+\begin{code}
+	\inputminted{xml}{codes/android/Pokedex/app/src/main/res/layout/activity_main.xml}
+	\caption{App Files : Layouts : activity\_main.xml}
+\end{code}
+\subsection{Values}
+\subsubsection{strings.xml}
+Helps when we want to support multiple languages.
+\begin{code}
+	\inputminted{xml}{codes/android/Pokedex/app/src/main/res/values/strings.xml}
+	\caption{App Files : Values : strings.xml}
+\end{code}
+
+\subsection{Gradle Scripts}
+\begin{code}
+	\inputminted{groovy}{codes/android/Pokedex/app/build.gradle}
+	\caption{App Files : Gradle Scripts : build.gradle (Module app)}
+\end{code}
+
+\section{Adding Recycler View}
+\begin{enumerate}
+	\item Add dependency in build.grade (Module: App)
+	\item Start with view - What the app needs to be doing
+	      \begin{enumerate}
+		      \item Add view in the layout (activity\_main.xml)
+		      \item Add ID to the view to reference
+		      \item Need a way to define how each row is going to look
+		            like
+		      \item Create new layout for that
+		      \item Add view in this layout, and IDs to reference
+	      \end{enumerate}
+	\item Then create models to power that view
+	      \begin{enumerate}
+		      \item Create java class to represent a single element
+		      \item Add constructors, getters, and setters as per need
+	      \end{enumerate}
+	\item Write the controllers to hook up the two
+	      \begin{enumerate}
+		      \item Recycler class has another class attached to it
+		            called the adapter - what data is to be displayed
+		            and how to do it
+		      \item Create class to represent all of the data inside
+		            the recycler view that extends
+		            \mintinline{java}{RecyclerView.Adapter}
+		      \item It's a generic class that takes as its type a
+		            \emph{ViewHolder} that holds a view and allows to
+		            manipulate what's on the screen. We're going to create
+		            an object that holds that view and from there we
+		            modify some of the layout elements we just defined
+		      \item Add fields in the ViewHolder class to represent
+		            the layout and views we created
+		      \item Write constructors to get views by id
+		      \item Get data (or hardcode some for now)
+		      \item Implement methods defined on RecyclerView.Adapter
+		            \begin{enumerate}
+			            \item onCreateViewHolder
+			            \item onBindViewHolder
+			            \item getItemCount
+		            \end{enumerate}
+	      \end{enumerate}
+	\item Use the adapter
+	      \begin{enumerate}
+		      \item Add a few more fields in the MainActivity
+		            \begin{enumerate}
+			            \item RecyclerView
+			            \item RecyclerView.Adapter
+			            \item RecyclerView.LayoutManager
+		            \end{enumerate}
+		      \item Instantiate them
+		      \item Connect them
+	      \end{enumerate}
+\end{enumerate}
+
+\section{Adding New Activity}
+\begin{enumerate}
+	\item Create New Activity (right click on left hand side)
+	\item Start with layout
+	\item Next is model
+	\item Now \emph{Intent}, that is how we pass data from first activity to the second
+	      \begin{enumerate}
+		      \item Use containerView.setTag and pass the object representing the data
+		      \item Add eventHandler
+	      \end{enumerate}
+\end{enumerate}
