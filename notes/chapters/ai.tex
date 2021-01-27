@@ -1,0 +1,161 @@
+\chapter{Artificial Intelligence}
+\section{Decision Making}
+Can do better than if/else
+\begin{enumerate}
+	\item Game
+	\item Handwriting Recognition
+	\item Spam Detenction
+	\item Movie Recommendations
+	\item Data Generation
+\end{enumerate}
+
+\section{Decision Tree}
+Ask questions and take decisions/ask more questions based on the response!
+
+\section{Minimax}
+Minimax is a game playing algorithm, that's useful anytime you have two competing
+players that are trying to play some sort of competitive game like tic-tac-toe.
+
+\subsection{Tic-Tac-Toe}
+\subsubsection{Representation}
+\begin{enumerate}
+	\item O winning: $-1$
+	\item X winning: $+1$
+	\item Draw: $0$
+\end{enumerate}
+
+\subsubsection{Players}
+\begin{enumerate}
+	\item MAX(X) aims to maximize the score
+	\item MIN(O) aims to minimize the score
+\end{enumerate}
+
+\subsubsection{Board}
+We can assign a score to every board in tic-tac-toe.
+
+\paragraph{Game completed:} Assign score according to winner.
+\paragraph{Game incomplete:} Assign score by assuming both players are playing optimally.
+Explore all possible branches.
+
+\subsection{Pseudocode}
+\begin{code}
+	\begin{minted}{python}
+		if player is X:
+			for all possible moves:
+				calculate score for board
+			choose move with highest score
+		else:
+			for all possible moves:
+				calculate score for board
+			choose move with lowest score
+	\end{minted}
+	\caption{Minimax Pseudocode}
+\end{code}
+
+\subsection{Problems!}
+\begin{enumerate}
+	\item Computationally expensive to calculate all possibilities
+	      \begin{itemize}
+		      \item $255168$ total possible tic-tac-toe games
+		      \item $288$ billion possible chess games, only after 4 moves each
+		      \item $10^{29000}$ is \emph{probably} a lower bound on the total number
+		            of chess games
+	      \end{itemize}
+\end{enumerate}
+
+\subsection{Depth-Limited Minimax}
+\paragraph{Evaluation Function:} Function that calculates the expected utility of
+the game from a given state.
+
+\paragraph{Strategy:} Follow a limited number of moves and ask score from evaluation
+function.
+
+\section{Uninformed Search}
+\subsection{Depth First Search}
+Travel through the path as much as you can, then back up and try again if hit a
+dead end.
+
+\subsubsection{Problem}
+\begin{enumerate}
+	\item Time-consuming: Hits lots of dead ends
+	\item Time-consuming: Doesn't necessarily returns the shortest path
+\end{enumerate}
+
+\subsection{Breadth First Search}
+Travel all paths at each \emph{fork}. Gives the shortest path!
+
+\subsubsection{Problem}
+\begin{enumerate}
+	\item Still exploring a lot of useless paths
+\end{enumerate}
+
+\section{Informed Search}
+Search strategy that uses problem-specific knowledge to find solutions more efficiently.
+
+\subsection{Heuristics}
+Some way of estimating, how good a particular state is going to be.
+
+\subsubsection{Possible Heuristics}
+\begin{enumerate}
+	\item Manhattan Distance
+\end{enumerate}
+
+\subsection{Greedy Best First Search}
+Take the best path according to heuristics!
+
+\subsubsection{Problem}
+\begin{enumerate}
+	\item May still not give shortest path!
+\end{enumerate}
+
+\subsection{A* Search}
+Take the best path according to heuristics as well as how far we've already come!
+
+\paragraph{Note:} Given a \emph{good} heuristic function, this will find the shortest
+path.
+
+\section{Reinforcement Learning}
+A type of machine learning that learns from positive or negative rewards.
+
+\subsection{Explore vs Exploit}
+Take good choices but occasionally take some risks.
+
+\subsection{Epsilon Greedy Approach}
+Probability to make a random move!
+\begin{equation*}
+	\epsilon = 0.10
+\end{equation*}
+
+\begin{code}
+	\begin{minted}{python}
+		if random() < epsilon:
+			make a random move
+		else:
+			make the move with the highest value
+	\end{minted}
+	\caption{Epsilon Greedy Pseudocode}
+\end{code}
+
+\section{Genetic Algorithms}
+Instead of creating a good algo, create a lot of bad algos, and let them evolve.
+Take a handful who're better, duplicate and mutate them while discarding the
+really bad ones. Repeat this generation over generation.
+
+\begin{code}
+	\begin{minted}{python}
+		make initial generation of candidates randomly
+		repeat until successful:
+			for each candidate:
+				calculate its fitness
+			remove least fit candidates
+			make new generation from remaining candidates
+	\end{minted}
+	\caption{Genetic Algorithm Pseudocode}
+\end{code}
+
+\section{Neural Networks}
+Mimic biological neorons. Have units that tranfer data in input/output format.
+Layers of multiple units can form a whole network that can learn to tune
+the functions based on given data to translate an input to an output.
+
+\blfootnote{Check \href{pdfs/ai.pdf}{ai.pdf} for more details.}
