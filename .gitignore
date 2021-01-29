@@ -15,6 +15,7 @@
 *.lop
 .latexmkrc
 _minted-*
+__latexindent_temp.tex
 *.zip
 cs50
 cs50_setup_ubuntu.sh
